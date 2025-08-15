@@ -128,6 +128,6 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-RESTURANT_CONFIG = {
-    'NAME': 'Resturant Name',
+RESTAURANT_CONFIG = {
+    'NAME': 'Restaurant Name',
 }
