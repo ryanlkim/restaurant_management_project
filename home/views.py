@@ -10,3 +10,9 @@ def resturant_view(request):
         'atmosphere':'Enjoy your meal in our elegantly designed space...'
     }
     return render(request, 'home/resturant.html', context)
+
+def home_view(request):
+    context = {
+        'resturant_name':settings.RESTURANT_CONFIG['NAME'],
+    }
+    return render(request, 'home/index.html', context)
