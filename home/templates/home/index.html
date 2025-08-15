@@ -1,29 +1,39 @@
-{% load static %}
+{% extends "base.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="{% static 'home/style.css' %">
-</head>
-<body>
-    <header>
-        <h1>Welcome to {{ restaurant_name }}</h1>
-        <p>Making the web a prettier place, one page at a time.</p>
-    </header>
+{% block content %}
 
-    <main>
-        <section>
-            <h2>About Us</h2>
-            <p>We love clean, simple design with a touch of color.</p>
-        </section>
-        <section>
-            <h2>Get Started</h2>
-            <p>Click the button below to learn more!</p>
-            <a href="#" class="button">Learn More</a>
-        </section>
-    </main>
-</body>
-</html>
+<div style="max-width: 1200px; margin: 0 auto; padding: 20px; font-family: 'Arial', sans-serif;">
+    <!--Hero Section-->
+    <div style="text-align: center; padding: 40px 0; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); border-radius: 10px; margin-bottom: 30px;">
+        <h1 style="font-size: 3rem; color: #2c3e50; margin-bottom: 20px; text-shadow: 1px 1px 3px rgba(0,0,0,0.1);">
+            Welcome to <span style="color: #e74c3c; font-weight: 700;">{{ restaurant_name }}</span>
+
+        </h1>
+        <p style="font-size: 1.2rem; color: #34495e; max-width: 700px; margin: 0 auto; line-height: 1.6;">
+            Where exceptional cuisine meets unforgettable dining experience
+        </p>
+    </div>
+
+    <!-- Featured Section -->
+    <div style="display: flex; gap: 30px; margin-bottom: 40px;">
+        <div stlye="flex: 1; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rbga(0,0,0,0.1);">
+            <h2 style="color: #2c3e50; border-bottom: 2px solid #e74c3c; padding-bottom: 10px; display: inline-block;">Our Specialties</h2>
+            <p style="color: #7f8c8d; line-height: 1.7;">Discover our chef's seasonal creations made with locally-sourced ingredients.</p>
+        </div>
+
+        <div style="flex: 1; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <h2 style="color: #2c3e50; border-bottom: 2px solid #e74c3c; padding-bottom: 10px; display: inline-block;">Hours</h2>
+            <p style="color: #7f8c8d; line-height: 1.7">
+                <strong>Dinner:</strong> 5pm - 10pm<br>
+                <strong>Weekend Brunch:</strong> 10am - 2pm
+            </p>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div style="text-align: center; background-color: #e74c3c; color: white; padding: 30px; border-radius: 8px;">
+        <h2 style="margin-top: 0;">Ready to experience {{ restaurant_name }}?</h2>
+        <a href="/reservations" style="display: inline-block; background: white; color: #e74c3c; padding: 12px 30px; text-decoration: none; font-weight: bold; border-radius: 50px; margin-top: 1 5px; transition: all 0.3s ease";>Make a Reservation</a>
+    </div>
+</div>
+{% endblock %}
