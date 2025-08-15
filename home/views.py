@@ -12,7 +12,8 @@ def restaurant_view(request):
     return render(request, 'home/restaurant.html', context)
 
 def home_view(request):
+    restaurant = Restaurant.objects.first()
     context = {
-        'restaurant_name':settings.RESTAURANT_CONFIG['NAME'],
+        'restaurant_name': restaurant.name if restaurant else "Our Restaurant"
     }
     return render(request, 'home/index.html', context)
