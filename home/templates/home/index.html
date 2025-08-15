@@ -36,4 +36,73 @@
         <a href="/reservations" style="display: inline-block; background: white; color: #e74c3c; padding: 12px 30px; text-decoration: none; font-weight: bold; border-radius: 50px; margin-top: 1 5px; transition: all 0.3s ease";>Make a Reservation</a>
     </div>
 </div>
+
+<div class="homepage-container">
+    <!-- Main Header Section -->
+    <header class="restaurant-header">
+        <h1 class="restaurant-name">{{ restaurant_name }}</h1>
+        <p class="welcome-message">Welcome to our culinary experience</p>
+    </header>
+
+    <!--Welcome Content-->
+    <section class="welcome-section">
+        <div class="welcome-content">
+            <h2>Discover our Flavors</h2>
+            <p>We're delighted to have you join us for an unforgettable dining experience.</p>
+            <p>Our chefs craft each dish with passion and the finest local ingredients.</p>
+        </div>
+    </section>
+</div>
+
+<style>
+    /* Basic Styling */
+    .homepage-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        color: #333;
+    }
+
+    .restaurant-header {
+        text-align: center;
+        padding: 40px 0;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .restaurant-name {
+        font-size: 3rem;
+        color: #2a2a2a;
+        margin-bottom: 10px;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+
+    .welcome-message {
+        font-size: 1.2rem;
+        color: #666;
+    }
+
+    .welcome-section {
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .welcome-content {
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    .welcome-content h2 {
+        color: #444;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+
+    .margin-content p {
+        margin-bottom: 15px;
+    }
+</style>
 {% endblock %}
