@@ -31,3 +31,9 @@ def contact_us(request):
         }
     }
     return render(request, 'home/contact.html', contact_info)
+
+def home(request):
+    context = {
+        'phone_number': settings.RESTARUANT_INFO['PHONE'],
+    }
+    return render(request, 'home/index.html', context)
