@@ -131,3 +131,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 RESTAURANT_CONFIG = {
     'NAME': 'Restaurant Name',
 }
+
+RESTAURANT_INFO = {
+    'PHONE' : '(555) 123-4567',
+}
