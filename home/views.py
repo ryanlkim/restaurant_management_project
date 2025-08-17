@@ -17,3 +17,17 @@ def home_view(request):
         'restaurant_name': restaurant.name if restaurant else "Our Restaurant"
     }
     return render(request, 'home/index.html', context)
+
+def contact_us(request):
+    #Hardcoded contact information
+    contact_info = {
+        'title': 'Contact us',
+        'address' : '123 Restaurant Street, Foodville, FV 12345',
+        'phone' : '(555) 123-4567',
+        'email' : 'info@restaurantmanagement.com',
+        'hours' : {
+            'weekdays' : '9:00 AM - 10:00 PM',
+            'weekends' : '10:00 AM- 11:00PM'
+        }
+    }
+    return render(request, 'home/contact.html', contact_info)
